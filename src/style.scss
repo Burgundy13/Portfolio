@@ -65,7 +65,7 @@ h1 {
 		font-size: 5rem;
 	}
 	@media (max-width: 475px) {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 }
 h2 {
@@ -221,6 +221,9 @@ nav {
 			@media (max-width: 650px) {
 				@include flex(center, space-between, row);
 				margin-top: 50%;
+			}
+			@media (max-width: 450px) {
+				margin-top: 60%;
 			}
 			a {
 				transform: scale(1);

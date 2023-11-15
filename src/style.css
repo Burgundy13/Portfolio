@@ -32,7 +32,7 @@ h1 {
 }
 @media (max-width: 475px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -266,6 +266,11 @@ nav .container ul li a:hover::after {
     justify-content: space-between;
     flex-direction: row;
     margin-top: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .hero .container .socials {
+    margin-top: 60%;
   }
 }
 .hero .container .socials a {
