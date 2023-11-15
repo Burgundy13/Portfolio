@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/761e4c8e5c.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="src/style.css" />
+		<link rel="icon" href="src/images/icon-computer.png" type="image/png" />
+		<title>Developer Portfolio</title>
+	</head>
+
+	<body>
+		<!-- nav -->
+		<nav>
+			<div class="container">
+				<a class="logo" href="index.html">V.</a>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- hero -->
+		<section class="hero">
+			<div class="container">
+				<div class="text">
+					<h1>vlado<span>Ivković</span></h1>
+					<p>FrontEnd Developer</p>
+					<a
+						class="btn--animation"
+						href="src/VladoIvkovic-CV.pdf"
+						target="_blank"
+						>resume
+					</a>
+				</div>
+				<div class="socials">
+					<a href="https://www.linkedin.com/in/vlado-ivkovic/" target="_blank">
+						<img src="src/images/linkedin.svg" alt="linkedin-svg" />
+					</a>
+					<a href="https://github.com/Burgundy13" target="_blank">
+						<img src="src/images/github.svg" alt="github-svg" />
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- about -->
+		<section id="about" class="about">
+			<div class="ovarlay">
+				<div class="container">
+					<div class="text">
+						<h2>Hey there!</h2>
+						<p>
+							My name is Vlado. I am a FrontEnd Developer, with a passion for
+							creating beautiful web experiences.
+						</p>
+						<br />
+						<p>
+							Fascinated by technology, I am eager to learn new technologies and
+							programming concepts that hone my skills as a developer and make
+							my projects skyrocket.
+						</p>
+					</div>
+					<div class="about-img">
+						<img src="src/images/DSC_0185.JPG" alt="Headshot pic" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--projects -->
+
+		<section id="projects" class="projects">
+			<div class="container">
+				<h2>Check out some of my projects...</h2>
+				<div class="filter-container"></div>
+			</div>
+		</section>
+
+		<section class="contact">
+			<div class="container">
+				<article class="projects-description">
+					<div class="text">
+						<p>
+							I am, at heart, a creative thinker; an artistic type with a
+							strange obsession with code.
+							<br />
+							...
+							<br />
+							I enjoy helping entrepreneurs bring their ideas to life in the
+							digital space, and I look forward to beginning yet another
+							successful project with you!
+						</p>
+						<p>I want to bring your ideas to life.</p>
+						<p class="cta">
+							<span>My Toolbelt includes:</span> <br />
+							HTML5, CSS3, SASS, Bootstrap, JavaScript, jQuery, React, Angular,
+							GitHub, Adobe Photoshop, Adobe Ilustrator
+						</p>
+						<p>What I can accomplish for you:</p>
+						<ul>
+							<li>- Create rich and compelling user interfaces.</li>
+							<li>- Build web applications with dynamic content.</li>
+							<li>- Prototype new designs (mockup-to-product)</li>
+						</ul>
+					</div>
+					<div id="contact" class="contact__form">
+						<h3>Let's get in touch</h3>
+						<form name="contact" method="POST" data-netlify="true">
+							<div class="form-control">
+								<input type="text" name="name" id="name" r />
+								<label>Name</label>
+							</div>
+							<div class="form-control">
+								<input type="email" name="email" id="email" />
+								<label>Email</label>
+							</div>
+							<textarea
+								name="message"
+								id="message"
+								cols="30"
+								rows="7"
+								placeholder="👋"
+							></textarea>
+							<input type="submit" name="submit" id="submit" value="Send" />
+						</form>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<a class="logo" href="index.html">V.</a>
+				<div class="socials">
+					<a href="https://www.linkedin.com/in/vlado-ivkovic/" target="_blank">
+						<img src="src/images/linkedin.svg" alt="linkedin-svg" />
+					</a>
+					<a href="https://github.com/Burgundy13" target="_blank">
+						<img src="src/images/github.svg" alt="github-svg" />
+					</a>
+				</div>
+				<p>
+					"There is no bad idea it's all about the execution." <br />
+					<cite>- Anonymous</cite>
+				</p>
+			</div>
+			&copy; VladoIvkovic 2023
+		</footer>
+
+		<script src="src/main.js"></script>
+	</body>
+</html>
