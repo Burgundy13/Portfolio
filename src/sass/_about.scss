@@ -1,0 +1,41 @@
+/********************** about **********************/
+.about {
+	background: linear-gradient(
+		to right,
+		#2e2e2e 0%,
+		#2e2e2e 50%,
+		white 75%,
+		white 100%
+	);
+
+	.ovarlay {
+		border-radius: 10rem 0 0 0;
+		background-color: white;
+
+		.container {
+			padding: $padding;
+			padding-top: 5em;
+
+			@include media-phone {
+				@include flex(center, space-between, column);
+			}
+
+			.about__text {
+				flex: 0 0 50%;
+				text-align: justify;
+			}
+			.img__wrapper {
+				flex: 0 0 40%;
+
+				@include media-phone {
+					margin-top: 1em;
+				}
+
+				.about__img {
+					border-radius: 5px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

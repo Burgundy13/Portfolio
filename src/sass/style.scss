@@ -136,7 +136,7 @@ img {
 	transition: $tranistion;
 	margin-bottom: 0.3rem;
 	&:hover {
-		background: #2f8eb6;
+		background: $color-green;
 		color: #ffff;
 	}
 }
@@ -163,42 +163,7 @@ img {
 
 @import "../sass/nav";
 @import "../sass/hero";
-
-/********************** about **********************/
-.about {
-	background: linear-gradient(
-		to right,
-		#2e2e2e 0%,
-		#2e2e2e 50%,
-		white 75%,
-		white 100%
-	);
-	.ovarlay {
-		border-radius: 10rem 0 0 0;
-		background-color: white;
-		.container {
-			padding: $padding;
-			padding-top: 5em;
-			@media (max-width: 768px) {
-				@include flex(center, space-between, column);
-			}
-			.text {
-				flex: 0 0 50%;
-				text-align: justify;
-			}
-			.about-img {
-				flex: 0 0 40%;
-
-				img {
-					width: 100%;
-				}
-				@media (max-width: 768px) {
-					margin-top: 1em;
-				}
-			}
-		}
-	}
-}
+@import "../sass/about";
 
 /********************** projects **********************/
 .projects {

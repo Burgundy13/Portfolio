@@ -42,6 +42,10 @@
 			.hero__link {
 				transform: scale(1);
 				transition: $tranistion;
+				padding: 5px;
+				border-radius: 10px;
+				filter: drop-shadow(2px 2px 5px $color-green);
+
 				& + * {
 					margin-top: 1em;
 

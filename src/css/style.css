@@ -120,7 +120,7 @@ img {
   margin-bottom: 0.3rem;
 }
 .btn:hover, .btn-light:hover, .btn-middle:hover, .btn-dark:hover {
-  background: #2f8eb6;
+  background: #2ae73a;
   color: white;
 }
 
@@ -256,6 +256,9 @@ img {
 .hero .container .hero__socials .hero__link {
   transform: scale(1);
   transition: 300ms cubic-bezier(0.53, -0.06, 0.94, 1.44);
+  padding: 5px;
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px 5px #2ae73a);
 }
 .hero .container .hero__socials .hero__link + * {
   margin-top: 1em;
@@ -347,7 +350,7 @@ img {
   padding: 0 0 5em;
   padding-top: 5em;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .about .ovarlay .container {
     display: flex;
     flex-wrap: wrap;
@@ -356,20 +359,21 @@ img {
     flex-direction: column;
   }
 }
-.about .ovarlay .container .text {
+.about .ovarlay .container .about__text {
   flex: 0 0 50%;
   text-align: justify;
 }
-.about .ovarlay .container .about-img {
+.about .ovarlay .container .img__wrapper {
   flex: 0 0 40%;
 }
-.about .ovarlay .container .about-img img {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .about .ovarlay .container .about-img {
+@media screen and (max-width: 650px) {
+  .about .ovarlay .container .img__wrapper {
     margin-top: 1em;
   }
+}
+.about .ovarlay .container .img__wrapper .about__img {
+  border-radius: 5px;
+  width: 100%;
 }
 
 /********************** projects **********************/
