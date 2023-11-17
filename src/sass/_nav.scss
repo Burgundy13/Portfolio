@@ -22,7 +22,7 @@
 			}
 
 			.nav__link {
-				@include aEffect(#ffffff);
+				@include aEffect($color-green);
 			}
 		}
 	}

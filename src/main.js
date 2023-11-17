@@ -46,7 +46,7 @@ const projectBtns = document.querySelector(".projects-sum");
 const projectItems = document.querySelectorAll(".projects-item");
 const projectImg = document.querySelector(".projects-img");
 const projectImg2 = document.querySelector(".projects-img2");
-const btnAnimation = document.querySelector(".btn--animation");
+const btnAnimation = document.querySelector("[data-js='button-animation']");
 const labels = document.querySelectorAll(".form-control label");
 const sectionCenter = document.querySelector(".filter-container");
 const container = document.querySelector(".btn-nav");
