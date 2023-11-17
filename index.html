@@ -12,26 +12,36 @@
 			src="https://kit.fontawesome.com/761e4c8e5c.js"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="src/style.css" />
+		<link rel="stylesheet" href="src/css/style.css" />
 		<link rel="icon" href="src/images/icon-computer.png" type="image/png" />
 		<title>Developer Portfolio</title>
 	</head>
 
 	<body>
 		<!-- nav -->
-		<nav>
+
+		<nav class="nav">
 			<div class="container">
 				<a class="logo" href="index.html">V.</a>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__link" href="#hero">Home</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#about">About</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#projects">Projects</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#contact">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
 
 		<!-- hero -->
-		<section class="hero">
+		<section id="hero" class="hero">
 			<div class="container">
 				<div class="text">
 					<h1>vlado<span>Ivković</span></h1>

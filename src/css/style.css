@@ -96,6 +96,20 @@ img {
 .container {
   width: min(90%, 1140px);
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media screen and (max-width: 650px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }
 
 .btn, .btn-light, .btn-middle, .btn-dark {
@@ -131,22 +145,14 @@ img {
   color: #e7e72a;
 }
 
-/********************** nav **********************/
-nav {
+.nav {
   background-color: #272727;
   padding: 0.8em;
   position: fixed;
-  z-index: 5;
+  z-index: 2;
   width: 100%;
 }
-nav .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-nav .container ul {
+.nav .nav__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -154,15 +160,30 @@ nav .container ul {
   flex-direction: row;
   font-size: 1.3rem;
 }
-nav .container ul li {
+@media screen and (max-width: 650px) {
+  .nav .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
+}
+.nav .nav__list .nav__item {
   margin-left: 1.5em;
 }
-nav .container ul li a {
+@media screen and (max-width: 650px) {
+  .nav .nav__list .nav__item {
+    margin-left: 0.5em;
+  }
+}
+.nav .nav__list .nav__item .nav__link {
   position: relative;
   z-index: 0;
   transition: 250ms ease-in-out;
 }
-nav .container ul li a::after {
+.nav .nav__list .nav__item .nav__link::after {
   content: "";
   position: absolute;
   top: 0;
@@ -173,31 +194,11 @@ nav .container ul li a::after {
   z-index: -1;
   transition: 300ms cubic-bezier(0.53, -0.06, 0.94, 1.44);
 }
-nav .container ul li a:hover {
+.nav .nav__list .nav__item .nav__link:hover {
   color: #272727;
 }
-nav .container ul li a:hover::after {
+.nav .nav__list .nav__item .nav__link:hover::after {
   width: 100%;
-}
-@media (max-width: 650px) {
-  nav .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  nav .container ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    font-size: 1.5rem;
-  }
-  nav .container ul li {
-    margin-left: 0.5em;
-  }
 }
 
 /********************** hero **********************/
@@ -211,11 +212,6 @@ nav .container ul li a:hover::after {
 .hero .container {
   height: 30vh;
   transform: translateY(100%);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
 }
 @media (max-width: 650px) {
   .hero .container {
@@ -239,7 +235,7 @@ nav .container ul li a:hover::after {
   font-weight: 300;
 }
 .hero .container .text::after {
-  content: url(images/coding-1294373_1280.png);
+  content: url(../images/coding-1294373_1280.png);
   opacity: 0.6;
   position: absolute;
   top: -22em;
@@ -375,11 +371,6 @@ nav .container ul li a:hover::after {
 .about .ovarlay .container {
   padding: 0 0 5em;
   padding-top: 5em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
 }
 @media (max-width: 768px) {
   .about .ovarlay .container {
@@ -446,8 +437,7 @@ nav .container ul li a:hover::after {
   height: 200px;
   width: 100%;
   border-bottom: 0.3rem solid #fff;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .projects .container .filter-container .item .img .item-text {
   position: absolute;
@@ -488,11 +478,6 @@ nav .container ul li a:hover::after {
 .contact .container {
   padding: 0 0 5em;
   position: inherit;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
 }
 @media (max-width: 1140px) {
   .contact .container {
@@ -642,13 +627,9 @@ footer {
   border-radius: 0 10em 0 0;
   text-align: center;
   padding-bottom: 0.2em;
+  width: 100%;
 }
 footer .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
   height: 20vh;
   padding: 0 0 5em;
 }
@@ -716,4 +697,6 @@ footer .container .socials > * + * {
   100% {
     transform: translateY(-100%);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
