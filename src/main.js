@@ -49,7 +49,6 @@ const projectImg2 = document.querySelector(".projects-img2");
 const btnAnimation = document.querySelector("[data-js='button-animation']");
 const labels = document.querySelectorAll(".form-control label");
 const sectionCenter = document.querySelector(".filter-container");
-const container = document.querySelector(".btn-nav");
 
 // btn span el for resume
 if (btnAnimation) {

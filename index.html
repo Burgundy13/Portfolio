@@ -118,10 +118,12 @@
 				</div>
 			</section>
 
+			<!-- contact -->
+
 			<section class="contact">
 				<div class="container">
-					<article class="projects-description">
-						<div class="text">
+					<div class="contact__wrapper">
+						<div class="contact__text">
 							<p>
 								I am, at heart, a creative thinker; an artistic type with a
 								strange obsession with code.
@@ -133,21 +135,32 @@
 								successful project with you!
 							</p>
 							<p>I want to bring your ideas to life.</p>
-							<p class="cta">
+							<p class="contact__cta">
 								<span>My Toolbelt includes:</span> <br />
 								HTML5, CSS3, SASS, Bootstrap, JavaScript, jQuery, React,
 								Angular, GitHub, Adobe Photoshop, Adobe Ilustrator
 							</p>
 							<p>What I can accomplish for you:</p>
-							<ul>
-								<li>- Create rich and compelling user interfaces.</li>
-								<li>- Build web applications with dynamic content.</li>
-								<li>- Prototype new designs (mockup-to-product)</li>
+							<ul class="contact__list">
+								<li class="contact__item">
+									- Create rich and compelling user interfaces.
+								</li>
+								<li class="contact__item">
+									- Build web applications with dynamic content.
+								</li>
+								<li class="contact__item">
+									- Prototype new designs (mockup-to-product)
+								</li>
 							</ul>
 						</div>
-						<div id="contact" class="contact__form">
+						<div id="contact" class="form__wrapper">
 							<h3>Let's get in touch</h3>
-							<form name="contact" method="POST" data-netlify="true">
+							<form
+								class="contact__form"
+								name="contact"
+								method="POST"
+								data-netlify="true"
+							>
 								<div class="form-control">
 									<input type="text" name="name" id="name" r />
 									<label>Name</label>
@@ -157,6 +170,7 @@
 									<label>Email</label>
 								</div>
 								<textarea
+									class="form__textarea"
 									name="message"
 									id="message"
 									cols="30"
@@ -166,10 +180,12 @@
 								<input type="submit" name="submit" id="submit" value="Send" />
 							</form>
 						</div>
-					</article>
+					</div>
 				</div>
 			</section>
 		</main>
+
+		<!-- footer -->
 
 		<footer>
 			<div class="container">

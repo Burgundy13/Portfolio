@@ -1,0 +1,43 @@
+footer {
+	display: block;
+	color: #ffffff;
+	background-color: #2e2e2e;
+	border-radius: 0 10em 0 0;
+	text-align: center;
+	padding-bottom: 0.2em;
+	width: 100%;
+	.container {
+		height: 20vh;
+		padding: $padding;
+		@media (max-width: 650px) {
+			@include flex(center, center, row);
+			p {
+				flex: 100%;
+			}
+		}
+		.socials {
+			a {
+				img {
+					transform: scale(0.7);
+					transition: $tranistion;
+					@media (max-width: 650px) {
+						transform: scale(0.4);
+					}
+				}
+
+				&:hover {
+					img {
+						transform: scale(0.6);
+					}
+				}
+			}
+			& > * + * {
+				margin-left: 2em;
+
+				@media (max-width: 650px) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

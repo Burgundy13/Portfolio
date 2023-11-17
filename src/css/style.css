@@ -120,7 +120,7 @@ img {
   margin-bottom: 0.3rem;
 }
 .btn:hover, .btn-light:hover, .btn-middle:hover, .btn-dark:hover {
-  background: #2ae73a;
+  opacity: 0.7;
   color: white;
 }
 
@@ -376,7 +376,6 @@ img {
   width: 100%;
 }
 
-/********************** projects **********************/
 .projects {
   padding: 0 0 5em;
   min-height: 55vh;
@@ -411,9 +410,9 @@ img {
   position: relative;
   overflow: hidden;
   height: 200px;
+  margin-bottom: 0.5rem;
 }
 .projects .container .filter-container .item .img img {
-  height: 200px;
   width: 100%;
   border-bottom: 0.3rem solid #fff;
   object-fit: cover;
@@ -426,7 +425,6 @@ img {
 }
 .projects .container .filter-container .item .img:hover img {
   opacity: 0.2;
-  border-color: #2f8eb6;
 }
 .projects .container .filter-container .item .img:hover .item-text {
   transform: translateY(-100%);
@@ -437,12 +435,10 @@ img {
   }
 }
 
-/********************** projects **********************/
 .contact {
   border-radius: 0 0 0 10em;
   padding-bottom: 2.5em;
   background-color: #ffffff;
-  position: inherit;
 }
 .contact::before {
   content: "";
@@ -456,30 +452,8 @@ img {
 }
 .contact .container {
   padding: 0 0 5em;
-  position: inherit;
 }
-@media (max-width: 1140px) {
-  .contact .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-top: 0;
-  }
-}
-.contact .container h2 {
-  flex: 100%;
-}
-.contact .container .projects-section {
-  flex: 0 0 60%;
-}
-@media (max-width: 1140px) {
-  .contact .container .projects-section {
-    display: none;
-  }
-}
-.contact .container .projects-description {
+.contact .container .contact__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -487,73 +461,59 @@ img {
   flex-direction: row;
   gap: 5em;
 }
-.contact .container .projects-description .projects-sum {
-  background: #2e2e2e;
-  padding: 2em;
-  border-radius: 0.5em;
-}
-.contact .container .projects-description .projects-section-sm {
-  display: none;
-}
-@media (max-width: 1140px) {
-  .contact .container .projects-description .projects-section-sm {
-    display: block;
-    margin-top: 1em;
-  }
-}
-.contact .container .projects-description .text {
+.contact .container .contact__wrapper .contact__text {
   flex: 0 0 50%;
   margin-top: 2em;
   text-align: justify;
 }
-@media (max-width: 650px) {
-  .contact .container .projects-description .text {
+@media screen and (max-width: 650px) {
+  .contact .container .contact__wrapper .contact__text {
     flex: 0 0 100%;
   }
 }
-.contact .container .projects-description .text > * + * {
+.contact .container .contact__wrapper .contact__text > * + * {
   margin-top: 1.5em;
 }
-.contact .container .projects-description .text .cta {
+.contact .container .contact__wrapper .contact__text .contact__cta {
   background-color: #2ae73a;
   padding: 0.5em;
   border-radius: 0.5em;
   color: black;
 }
-.contact .container .projects-description .text .cta span {
+.contact .container .contact__wrapper .contact__text .contact__cta span {
   font-style: italic;
 }
-.contact .container .projects-description .text ul li {
+.contact .container .contact__wrapper .contact__text .contact__list .contact__item {
   font-size: 1.1rem;
 }
-@media (max-width: 650px) {
-  .contact .container .projects-description .contact__form {
+@media screen and (max-width: 650px) {
+  .contact .container .contact__wrapper .form__wrapper {
     width: 100%;
   }
 }
-.contact .container .projects-description .contact__form form {
+.contact .container .contact__wrapper .form__wrapper .contact__form {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
-.contact .container .projects-description .contact__form form textarea {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form__textarea {
   font-family: inherit;
   border: 1px solid #2e2e2e;
   outline: none;
   padding: 0.5em;
   width: 100%;
 }
-.contact .container .projects-description .contact__form form textarea:focus {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form__textarea:focus {
   border: 1px solid #2f8eb6;
 }
-.contact .container .projects-description .contact__form form .form-control {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control {
   position: relative;
   margin: 20px 0 20px;
   width: 100%;
 }
-.contact .container .projects-description .contact__form form .form-control input {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control input {
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #2e2e2e;
@@ -563,28 +523,28 @@ img {
   font-size: 1.1rem;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.contact .container .projects-description .contact__form form .form-control label {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control label {
   position: absolute;
   top: 0.5em;
   left: 0;
 }
-.contact .container .projects-description .contact__form form .form-control label span {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control label span {
   display: inline-block;
   font-size: 18px;
   min-width: 5px;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.contact .container .projects-description .contact__form form .form-control :focus {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control :focus {
   border: 0;
   border-bottom: 1px solid #2f8eb6;
   outline: none;
   padding: 0.5em 0;
 }
-.contact .container .projects-description .contact__form form .form-control :focus + label span {
+.contact .container .contact__wrapper .form__wrapper .contact__form .form-control :focus + label span {
   color: #2f8eb6;
   transform: translateY(-30px);
 }
-.contact .container .projects-description .contact__form form #submit {
+.contact .container .contact__wrapper .form__wrapper .contact__form #submit {
   font-size: 1.3rem;
   padding: 0.5em;
   background-color: #2f8eb6;
@@ -595,7 +555,7 @@ img {
   align-self: center;
   cursor: pointer;
 }
-.contact .container .projects-description .contact__form form #submit:hover {
+.contact .container .contact__wrapper .form__wrapper .contact__form #submit:hover {
   transform: scaleX(0.95);
 }
 

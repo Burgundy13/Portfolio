@@ -1,0 +1,52 @@
+.projects {
+	padding: $padding;
+	min-height: 55vh;
+	.container {
+		.btn-nav {
+			@include flex(center, center, row);
+			& > * + * {
+				margin-left: 0.1em;
+			}
+			button {
+				font-size: 1.5rem;
+			}
+		}
+		.filter-container {
+			@include flex(flex-start, flex-start, row);
+			margin-top: 1em;
+			.item {
+				flex: 0 0 32%;
+				margin: 0.5em;
+				.img {
+					box-shadow: -2px -2px 8px;
+					position: relative;
+					overflow: hidden;
+					height: 200px;
+					margin-bottom: 0.5rem;
+					img {
+						width: 100%;
+						border-bottom: 0.3rem solid #fff;
+						object-fit: cover;
+					}
+					.item-text {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						padding: 1em;
+					}
+					&:hover {
+						img {
+							opacity: 0.2;
+						}
+						.item-text {
+							transform: translateY(-100%);
+						}
+					}
+				}
+				@media (max-width: 1250px) {
+					flex: 1 0 48%;
+				}
+			}
+		}
+	}
+}
